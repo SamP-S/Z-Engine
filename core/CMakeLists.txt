@@ -7,6 +7,16 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 set(CMAKE_BUILD_TYPE            Debug)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w")
 
+# git submodule
+find_package(Git REQUIRED)
+execute_process(
+    COMMAND ${GIT_EXECUTABLE}
+    submodule update --init --recursive
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
+
+message(STATUS "Proj src dir: ${PROJECT_SOURCE_DIR}")
+
 # spdlog
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/spdlog")
 
