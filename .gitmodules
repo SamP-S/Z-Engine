@@ -1,3 +1,9 @@
 [submodule "core/external/spdlog"]
 	path = core/external/spdlog
 	url = git@github.com:gabime/spdlog.git
+[submodule "modules/graphics/examples/external/stb"]
+	path = modules/graphics/examples/external/stb
+	url = git@github.com:nothings/stb.git
+[submodule "core/external/la"]
+	path = core/external/la
+	url = git@github.com:SamP-S/LA.git
