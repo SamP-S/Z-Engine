@@ -32,7 +32,11 @@ target_link_libraries(shared PUBLIC zen::graphics)
 # driver executable
 set(DRIVER_INCLUDES
 	"${CMAKE_CURRENT_SOURCE_DIR}/apps/00_cube"
-	"${CMAKE_CURRENT_SOURCE_DIR}/apps/01_multithreaded"
+	"${CMAKE_CURRENT_SOURCE_DIR}/apps/01_triangle"
+	"${CMAKE_CURRENT_SOURCE_DIR}/apps/02_cube"
+	"${CMAKE_CURRENT_SOURCE_DIR}/apps/03_texture"
+	"${CMAKE_CURRENT_SOURCE_DIR}/apps/04_framebuffer"
+	"${CMAKE_CURRENT_SOURCE_DIR}/apps/05_multithreaded"
 )
 file(GLOB_RECURSE APP_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/apps/**/*.cpp")
 set(MAIN_SRC "${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp")
