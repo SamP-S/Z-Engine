@@ -41,6 +41,7 @@ public:
         return true;
     }
 
+    // unregister an instance of T, do nothing if not found or NULL
     void unregister(T* _instance) {
         // cannot unregister null
         if (_instance == nullptr) {
@@ -73,6 +74,17 @@ public:
         }
     }
 
+    // get a copy of all registered instances, caller responsible for deleting returned array
+    T** getInstances(size_t& _count) const {
+        _count = m_count;
+        T** instancesCopy = new T*[m_count];
+        for (size_t i = 0; i < m_count; ++i) {
+            instancesCopy[i] = m_instances[i];
+        }
+        return instancesCopy;
+    }
+
+    // get count of registered instances
     size_t count() const {
         return m_count;
     }
