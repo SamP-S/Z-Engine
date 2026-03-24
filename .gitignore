@@ -1,3 +1,6 @@
+# Zen
+archive/
+
 # Ignore Development Environment
 *.log
 .vscode/
